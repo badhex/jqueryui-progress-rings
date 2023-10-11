@@ -1,6 +1,9 @@
 # jqueryui-progress-rings
 A jQueryUI widget to make radial progress rings
 
+![image](https://github.com/badhex/jqueryui-progress-rings/assets/2631812/9376522c-eb43-4775-a8fd-9303d0e44f29)
+
+
 # Examples
 Two rings.
 ```js
