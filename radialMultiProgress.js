@@ -3,6 +3,7 @@
         options: {
             thickness: 10,
             'font-size': 12,
+            'base-color': "#333",
             space: 1,
             antiAlias: false,
             scaleLabel: false,
@@ -43,6 +44,16 @@
                 const completionPercentage = (data.value - data.range[0]) / rangeSpan;
                 const strokeDasharray = 2 * Math.PI * currentRadius;
                 const strokeDashoffset = strokeDasharray - (strokeDasharray * completionPercentage);
+              
+                const baseCircle = document.createElementNS(svgNS, 'circle');
+                baseCircle.setAttribute('cx', '50');
+                baseCircle.setAttribute('cy', '50');
+                baseCircle.setAttribute('r', currentRadius);
+                baseCircle.setAttribute('fill', 'none');
+                baseCircle.setAttribute('stroke', this.options['base-color']);
+                baseCircle.setAttribute('stroke-width', this.options.thickness.toString());
+                baseCircle.setAttribute('transform', 'rotate(-90 50 50)');
+                svg.appendChild(baseCircle);
 
                 const circle = document.createElementNS(svgNS, 'circle');
                 circle.setAttribute('cx', '50');
