@@ -37,7 +37,9 @@
       circle.setAttribute("fill", fill);
       circle.setAttribute("stroke", stroke);
       circle.setAttribute("stroke-width", strokeWidth);
-      circle.setAttribute("transform", transform);
+      if (transform) {
+        circle.setAttribute("transform", transform);
+      }
       if (dashArray) {
         circle.setAttribute("stroke-dasharray", dashArray);
         circle.setAttribute("stroke-dashoffset", dashOffset);
