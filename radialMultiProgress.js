@@ -155,7 +155,7 @@
           currentRadius -= this.options.thickness + this.options.space;
         } else {
           const rangeSpan = data.range[1] - data.range[0];
-          const completionPercentage = (data.value - data.range[0]) / rangeSpan;
+          const completionPercentage = (data.range[1] - data.value) / rangeSpan;
           const strokeDasharray = 2 * Math.PI * currentRadius;
           const rotationVal = (data.startAngle || 0) - 90;
           const strokeDashoffset = strokeDasharray * completionPercentage;
