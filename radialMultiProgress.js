@@ -1,5 +1,6 @@
 (function ($) {
   $.widget("ui.radialMultiProgress", {
+    version: "1.0.0",
     options: {
       thickness: 10,
       "font-size": 12,
